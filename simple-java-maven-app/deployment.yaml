@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-java-maven-app-deployment
@@ -11,7 +11,7 @@ spec:
         app: simple-java-maven-app
     spec:
       containers:
-        - name: pcm-service-sample
-          image: demo2020/simple-java-maven-app
+        - name: simple-java-maven-app
+          image: index.docker.io/demo2020/simple-java-maven-app
           ports:
             - containerPort: 8080
