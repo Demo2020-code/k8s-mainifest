@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: simple-java-maven-app-deployment
+  namespace: sample
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simple-java-maven-app
+    spec:
+      containers:
+        - name: pcm-service-sample
+          image: demo2020/simple-java-maven-app
+          ports:
+            - containerPort: 8080
