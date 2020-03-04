@@ -2,7 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: simple-java-maven-app-deployment
-  namespace: sample
+  namespace: demo
 spec:
   replicas: 1
   template:
